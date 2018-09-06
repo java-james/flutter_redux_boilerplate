@@ -1,0 +1,71 @@
+######################
+# Project Specific
+######################
+
+
+######################
+# Intellij
+######################
+.idea*
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+classes/
+build/
+
+######################
+# Visual Studio Code
+######################
+.vscode/
+
+######################
+# Windows
+######################
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+######################
+# Mac OSX
+######################
+.DS_Store
+.svn
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+######################
+# Flutter & Dart
+######################
+.packages
+.pub/
+.dart_tool/
+.flutter-plugins
+
+######################
+# Directories
+######################
+/bin/
+/deploy/
+/out/
+
+######################
+# Logs
+######################
+*.log*
+
+######################
+# Others
+######################
+*.class
+*.*~
+*~
+.merge_file*
