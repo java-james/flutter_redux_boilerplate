@@ -11,6 +11,7 @@ This repository adheres to semantic versioning and follows the conventions of [k
 
 ### Changed
 - Further abstract components into screens, containers & components
+- Json serialization using json_serializable
 
 ### Fixed
 - State rehydration

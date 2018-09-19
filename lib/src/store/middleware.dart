@@ -6,7 +6,7 @@ import 'package:redux_persist_flutter/redux_persist_flutter.dart';
 import 'package:redux_thunk/redux_thunk.dart';
 
 final persistor = Persistor<AppState>(
-    storage: FlutterStorage(AppState.STATE_KEY), decoder: AppState.rehydrationJSON, debug: true);
+    storage: FlutterStorage(AppState.STATE_KEY), decoder: (json) => AppState.fromJson(json), debug: true);
 
 // Set up middleware
 List<Middleware<AppState>> createMiddleware() => <Middleware<AppState>>[
