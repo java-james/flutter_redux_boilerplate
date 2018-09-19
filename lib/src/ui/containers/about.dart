@@ -20,7 +20,7 @@ class AboutContainer extends StatelessWidget {
       )),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: AboutForm(token: vm.user.token),
+        child: AboutForm(name: vm.user.name),
       )
     );
   }

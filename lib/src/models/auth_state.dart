@@ -11,8 +11,8 @@ part 'auth_state.g.dart';
 class AuthState {
   static const String STATE_KEY = 'auth';
 
-  @JsonKey(name: 'isAuthenticated')
-  final bool isAuthenticated;
+  @JsonKey(name: 'token')
+  final String token;
 
   @JsonKey(name: 'user')
   final User user;
@@ -21,15 +21,15 @@ class AuthState {
   final String error;
 
   AuthState({
-    this.isAuthenticated = false,
+    this.token,
     this.user,
     this.error,
   });
 
   // allows us to modify AuthState parameters while cloning previous ones
-  AuthState copyWith({bool isAuthenticated, String error, User user}) {
+  AuthState copyWith({String token, String error, User user}) {
     return AuthState(
-      isAuthenticated: isAuthenticated ?? this.isAuthenticated,
+      token: token ?? this.token,
       error: error ?? this.error,
       user: user ?? this.user,
     );
@@ -41,6 +41,6 @@ class AuthState {
 
   @override
   String toString() {
-    return '{isAuthenticated: $isAuthenticated, user: $user, error: $error}';
+    return '{token: $token, user: $user, error: $error}';
   }
 }

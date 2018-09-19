@@ -7,28 +7,20 @@ import 'package:redux_thunk_boilerplate/src/models/user.dart';
 import 'package:redux_thunk_boilerplate/src/ui/screens/dashboard.dart';
 import 'package:redux_thunk_boilerplate/src/ui/screens/login.dart';
 
-class UserLoginRequest {}
-
-class UserLoginSuccess {
+class LoginSuccess {
+  final String token;
   final User user;
 
-  UserLoginSuccess(this.user);
+  LoginSuccess(this.token, this.user);
 }
 
-class UserLoginFailure {
-  final String error;
-
-  UserLoginFailure(this.error);
-}
-
-class UserLogout {}
+class LogoutSuccess {}
 
 final Function onLogin = (BuildContext context) {
   return (Store<AppState> store) {
     store.dispatch(IncrementLoadingRequest());
-    store.dispatch(UserLoginRequest());
     // TODO: login request
-    store.dispatch(UserLoginSuccess(User(token: 'placeholder_token', id: 'placeholder_id')));
+    store.dispatch(LoginSuccess('some_token', User(id: 'some_id', email: 'test@testmail.com', name: 'Test')));
     store.dispatch(DecrementLoadingRequest());
     Navigator.of(context).pushNamedAndRemoveUntil(DashboardScreen.route, (_) => false);
   };
@@ -37,7 +29,8 @@ final Function onLogin = (BuildContext context) {
 final Function onLogout = (BuildContext context) {
   return (Store<AppState> store) {
     store.dispatch(IncrementLoadingRequest());
-    store.dispatch(UserLogout());
+    // TODO: logout request
+    store.dispatch(LogoutSuccess());
     store.dispatch(DecrementLoadingRequest());
     Navigator.of(context).pushNamedAndRemoveUntil(LoginScreen.route, (_) => false);
   };

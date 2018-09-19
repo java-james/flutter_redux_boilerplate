@@ -11,10 +11,13 @@ class User {
   @JsonKey(name: 'id')
   final String id;
 
-  @JsonKey(name: 'token')
-  final String token;
+  @JsonKey(name: 'email')
+  final String email;
 
-  User({@required this.token, @required this.id});
+  @JsonKey(name: 'name')
+  final String name;
+
+  User({@required this.id, @required this.email, @required this.name});
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 
@@ -22,6 +25,6 @@ class User {
 
   @override
   String toString() {
-    return '{id: $id, token: $token,}';
+    return '{id: $id, email: $email, name: $name}';
   }
 }

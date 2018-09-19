@@ -4,24 +4,14 @@ import 'package:redux_thunk_boilerplate/src/actions/auth.dart' as actions;
 import 'package:redux_thunk_boilerplate/src/models/auth_state.dart';
 
 Reducer<AuthState> authReducer = combineReducers([
-  TypedReducer<AuthState, actions.UserLoginRequest>(userLoginRequestReducer),
-  TypedReducer<AuthState, actions.UserLoginSuccess>(userLoginSuccessReducer),
-  TypedReducer<AuthState, actions.UserLoginFailure>(userLoginFailureReducer),
-  TypedReducer<AuthState, actions.UserLogout>(userLogoutReducer),
+  TypedReducer<AuthState, actions.LoginSuccess>(loginSuccessReducer),
+  TypedReducer<AuthState, actions.LogoutSuccess>(logoutReducer),
 ]);
 
-AuthState userLoginRequestReducer(AuthState authState, actions.UserLoginRequest action) {
-  return AuthState().copyWith(isAuthenticated: false, error: null);
+AuthState loginSuccessReducer(AuthState authState, actions.LoginSuccess action) {
+  return AuthState().copyWith(token: action.token, user: action.user);
 }
 
-AuthState userLoginSuccessReducer(AuthState authState, actions.UserLoginSuccess action) {
-  return AuthState().copyWith(isAuthenticated: true, user: action.user, error: null);
-}
-
-AuthState userLoginFailureReducer(AuthState authState, actions.UserLoginFailure action) {
-  return AuthState().copyWith(isAuthenticated: false, error: action.error);
-}
-
-AuthState userLogoutReducer(AuthState authState, actions.UserLogout action) {
+AuthState logoutReducer(AuthState authState, actions.LogoutSuccess action) {
   return AuthState();
 }
