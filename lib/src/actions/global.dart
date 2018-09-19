@@ -9,3 +9,5 @@ class DecrementLoadingRequest {
 
   DecrementLoadingRequest();
 }
+
+class Reset {}

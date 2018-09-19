@@ -1,17 +1,16 @@
 import 'package:redux/redux.dart';
 
-import 'package:redux_thunk_boilerplate/src/actions/auth.dart' as actions;
+import 'package:redux_thunk_boilerplate/src/actions/auth.dart' as auth_actions;
+import 'package:redux_thunk_boilerplate/src/actions/global.dart' as global_actions;
 import 'package:redux_thunk_boilerplate/src/models/auth_state.dart';
 
 Reducer<AuthState> authReducer = combineReducers([
-  TypedReducer<AuthState, actions.LoginSuccess>(loginSuccessReducer),
-  TypedReducer<AuthState, actions.LogoutSuccess>(logoutReducer),
+  TypedReducer<AuthState, auth_actions.LoginSuccess>(_loginSuccessReducer),
+  TypedReducer<AuthState, global_actions.Reset>(_resetReducer),
 ]);
 
-AuthState loginSuccessReducer(AuthState authState, actions.LoginSuccess action) {
+AuthState _loginSuccessReducer(AuthState authState, auth_actions.LoginSuccess action) {
   return AuthState().copyWith(token: action.token, user: action.user);
 }
 
-AuthState logoutReducer(AuthState authState, actions.LogoutSuccess action) {
-  return AuthState();
-}
+AuthState _resetReducer(AuthState authState, global_actions.Reset action) => AuthState();

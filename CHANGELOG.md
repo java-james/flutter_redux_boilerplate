@@ -8,6 +8,7 @@ This repository adheres to semantic versioning and follows the conventions of [k
 - Base screens and state
 - Login screen with actions
 - About screen with actions
+- Global reset action
 
 ### Changed
 - Further abstract components into screens, containers & components
