@@ -12,6 +12,7 @@ This repository adheres to semantic versioning and follows the conventions of [k
 ### Changed
 - Further abstract components into screens, containers & components
 - Json serialization using json_serializable
+- Auth token from user model to auth state
 
 ### Fixed
 - State rehydration
