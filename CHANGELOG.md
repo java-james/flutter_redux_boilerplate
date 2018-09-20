@@ -9,6 +9,7 @@ This repository adheres to semantic versioning and follows the conventions of [k
 - Login screen with actions
 - About screen with actions
 - Global reset action
+- App wrapper with loading indicator
 
 ### Changed
 - Further abstract components into screens, containers & components
