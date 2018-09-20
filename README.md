@@ -9,7 +9,6 @@ A boilterplate flutter app using redux with redux thunk middleware & json_serial
 
 ## Architecture
 - [Widget architecture](docs/widget-architecture.md)
- No newline at end of file
  
  ## Images
 <img src='docs/images/login.png' width='300'>
