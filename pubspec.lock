@@ -297,7 +297,7 @@ packages:
       name: modal_progress_hud
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.1.0"
+    version: "0.1.1"
   multi_server_socket:
     dependency: transitive
     description:
