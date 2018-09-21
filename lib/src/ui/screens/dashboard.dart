@@ -12,16 +12,16 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StoreConnector<AppState, AboutVM>(
+    return StoreConnector<AppState, DashboardVM>(
       converter: buildVM,
-      builder: (BuildContext context, AboutVM vm) {
+      builder: (BuildContext context, DashboardVM vm) {
         return DashboardContainer(vm: vm);
       },
     );
   }
 
-  AboutVM buildVM(Store<AppState> store) {
-    return AboutVM(
+  DashboardVM buildVM(Store<AppState> store) {
+    return DashboardVM(
         user: store.state.auth.user,
         dispatchOnViewAbout: (BuildContext context) {
           store.dispatch(dashboard_actions.onViewAbout(context));

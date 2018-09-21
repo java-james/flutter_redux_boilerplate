@@ -6,7 +6,7 @@ import 'package:redux_thunk_boilerplate/src/ui/components/dashboard_list.dart';
 
 @immutable
 class DashboardContainer extends StatelessWidget {
-  final AboutVM vm;
+  final DashboardVM vm;
 
   DashboardContainer({@required this.vm});
 
@@ -29,9 +29,9 @@ class DashboardContainer extends StatelessWidget {
 }
 
 @immutable
-class AboutVM {
+class DashboardVM {
   final User user;
   final Function(BuildContext) dispatchOnViewAbout;
 
-  AboutVM({@required this.user, @required this.dispatchOnViewAbout});
+  DashboardVM({@required this.user, @required this.dispatchOnViewAbout});
 }

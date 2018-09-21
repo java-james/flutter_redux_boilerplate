@@ -18,5 +18,6 @@ This repository adheres to semantic versioning and follows the conventions of [k
 
 ### Fixed
 - State rehydration
+- DashboardVM name
 
 [Unreleased]: https://bitbucket.org/####
