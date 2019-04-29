@@ -2,6 +2,7 @@
 This repository adheres to semantic versioning and follows the conventions of [keepachangelog.com](http://keepachangelog.com).
 
 ## [Unreleased]
+
 ### Added
 - Initial project structure
 - Redux - persistance, logging, and thunk
@@ -20,4 +21,4 @@ This repository adheres to semantic versioning and follows the conventions of [k
 - State rehydration
 - DashboardVM name
 
-[Unreleased]: https://bitbucket.org/####
+[Unreleased]: https://github.com/java-james/flutter_redux_boilerplate/compare/34b6602...master
