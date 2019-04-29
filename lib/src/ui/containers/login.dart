@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:redux_thunk_boilerplate/src/models/auth_state.dart';
+import 'package:redux_thunk_boilerplate/src/models/state/auth.dart';
 import 'package:redux_thunk_boilerplate/src/ui/components/login_form.dart';
 
 @immutable

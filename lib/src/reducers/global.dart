@@ -1,7 +1,7 @@
 import 'package:redux/redux.dart';
 
 import 'package:redux_thunk_boilerplate/src/actions/global.dart' as global_actions;
-import 'package:redux_thunk_boilerplate/src/models/global_state.dart';
+import 'package:redux_thunk_boilerplate/src/models/state/global.dart';
 
 Reducer<GlobalState> globalReducer = combineReducers([
   TypedReducer<GlobalState, global_actions.IncrementLoadingRequest>(_incrementLoadingReducer),

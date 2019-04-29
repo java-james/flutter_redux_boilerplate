@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:redux_thunk_boilerplate/src/models/app_state.dart';
+import 'package:redux_thunk_boilerplate/src/models/state/app.dart';
 import 'package:redux_thunk_boilerplate/src/ui/screens/about.dart';
 import 'package:redux/redux.dart';
 

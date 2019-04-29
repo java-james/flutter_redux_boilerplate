@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:redux/redux.dart';
 
 import 'package:redux_thunk_boilerplate/src/actions/global.dart' as global_actions;
-import 'package:redux_thunk_boilerplate/src/models/app_state.dart';
+import 'package:redux_thunk_boilerplate/src/models/state/app.dart';
 import 'package:redux_thunk_boilerplate/src/models/user.dart';
 import 'package:redux_thunk_boilerplate/src/ui/screens/dashboard.dart';
 import 'package:redux_thunk_boilerplate/src/ui/screens/login.dart';

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
-import 'package:redux_thunk_boilerplate/src/models/app_state.dart';
+import 'package:redux_thunk_boilerplate/src/models/state/app.dart';
 import 'package:redux_thunk_boilerplate/src/ui/containers/login.dart';
 import 'package:redux_thunk_boilerplate/src/actions/auth.dart' as auth_actions;
 

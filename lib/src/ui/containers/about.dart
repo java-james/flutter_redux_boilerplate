@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+
 import 'package:redux_thunk_boilerplate/src/models/user.dart';
-import 'package:redux_thunk_boilerplate/src/styles/presentation/platform_adaptive.dart';
 import 'package:redux_thunk_boilerplate/src/styles/texts.dart';
 import 'package:redux_thunk_boilerplate/src/ui/components/about_form.dart';
 
@@ -13,7 +13,7 @@ class AboutContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PlatformAdaptiveAppBar(
+      appBar: AppBar(
           title: Text(
         'Redux Thunk Boilerplate',
         style: textStyles['nav_title'],

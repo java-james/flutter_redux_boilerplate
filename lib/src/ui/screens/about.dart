@@ -3,7 +3,7 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
 
 import 'package:redux_thunk_boilerplate/src/ui/containers/about.dart';
-import 'package:redux_thunk_boilerplate/src/models/app_state.dart';
+import 'package:redux_thunk_boilerplate/src/models/state/app.dart';
 
 @immutable
 class AboutScreen extends StatelessWidget {
