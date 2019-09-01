@@ -8,7 +8,7 @@ import 'package:redux_thunk_boilerplate/src/actions/auth.dart' as auth_actions;
 
 @immutable
 class LoginScreen extends StatelessWidget {
-  static final String route = '/login';
+  static final String route = 'login';
 
   @override
   Widget build(BuildContext context) {

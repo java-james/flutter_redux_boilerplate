@@ -10,8 +10,26 @@ targets:
           #
           # For usage information, reference the corresponding field in
           # `JsonSerializableGenerator`.
+          # https://github.com/dart-lang/json_serializable/tree/master/json_serializable
+          #
+          # options not used globally:
+          # any_map: false
+          # create_factory: true
+          # create_to_json: true
+          # disallow_unrecognized_keys: false
+          # encode_empty_collection: true
+          # field_rename: none
+          # nullable: true
+          #
+          # Whether the generator should include fields with null values in the serialized output
+          include_if_null: true
+          # Use wrappers to minimize the number of Map/List instances created
           use_wrappers: false
+          # Allow Map types other than Map<String, dynamic>
           any_map: false
+          # Add extra JSON validation checks to generated `fromJson` functions
           checked: true
+          # Call `toJson` explicitly on nested objects. Default: false
           explicit_to_json: true
+          # Generate public `toJson` functions rather than mixin classes
           generate_to_json_function: true

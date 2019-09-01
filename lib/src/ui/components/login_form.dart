@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:redux_thunk_boilerplate/src/styles/texts.dart';
 import 'package:meta/meta.dart';
-
-import 'package:redux_thunk_boilerplate/src/styles/colours.dart';
 
 @immutable
 class LoginForm extends StatelessWidget {
@@ -18,14 +15,13 @@ class LoginForm extends StatelessWidget {
       children: <Widget>[
         logo,
         SizedBox(height: 20.0),
-        title,
+        title(context),
         SizedBox(height: 20.0),
         email,
         SizedBox(height: 8.0),
         password,
         SizedBox(height: 24.0),
         loginButton(context),
-        forgotLabel
       ],
     );
   }
@@ -39,12 +35,12 @@ class LoginForm extends StatelessWidget {
     ),
   );
 
-  final title = Row(
+  final title = (context) => Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
       Text(
         'Redux Thunk',
-        style: textStyles['title'],
+        style: Theme.of(context).textTheme.title,
       ),
     ],
   );
@@ -71,19 +67,8 @@ class LoginForm extends StatelessWidget {
     ),
   );
 
-  Widget loginButton(BuildContext context) => MaterialButton(
-        minWidth: 200.0,
-        height: 42.0,
+  Widget loginButton(BuildContext context) => RaisedButton(
         onPressed: () => dispatchOnLogin(context),
-        color: colourStyles['primary'],
-        child: Text('Log In', style: TextStyle(color: Colors.white)),
+        child: Text('Log In'),
       );
-
-  final forgotLabel = FlatButton(
-    child: Text(
-      'Forgot password?',
-      style: TextStyle(color: Colors.black54),
-    ),
-    onPressed: () {},
-  );
 }

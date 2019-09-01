@@ -11,12 +11,9 @@ part 'app.g.dart';
 @immutable
 @JsonSerializable()
 class AppState {
-  static const String STATE_KEY = 'redux_thunk_boilerplate_app';
 
-  @JsonKey(name: 'auth')
   final AuthState auth;
 
-  @JsonKey(name: 'connections')
   final GlobalState global;
 
   AppState({GlobalState global, AuthState auth})

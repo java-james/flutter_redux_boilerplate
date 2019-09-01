@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:redux_thunk_boilerplate/src/models/user.dart';
-import 'package:redux_thunk_boilerplate/src/styles/texts.dart';
 import 'package:redux_thunk_boilerplate/src/ui/components/about_form.dart';
 
 @immutable
@@ -13,18 +12,15 @@ class AboutContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          title: Text(
-        'Redux Thunk Boilerplate',
-        style: textStyles['nav_title'],
-      )),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: AboutForm(name: vm.user.name),
-      )
-    );
+        appBar: AppBar(
+            title: Text(
+          'Redux Thunk Boilerplate',
+        )),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: AboutForm(name: vm.user.name),
+        ));
   }
-
 }
 
 @immutable

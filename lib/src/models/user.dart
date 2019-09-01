@@ -8,13 +8,10 @@ part 'user.g.dart';
 @JsonSerializable()
 class User {
 
-  @JsonKey(name: 'id')
   final String id;
 
-  @JsonKey(name: 'email')
   final String email;
 
-  @JsonKey(name: 'name')
   final String name;
 
   User({@required this.id, @required this.email, @required this.name});

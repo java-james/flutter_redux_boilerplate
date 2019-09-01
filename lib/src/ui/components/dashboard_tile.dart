@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:redux_thunk_boilerplate/src/styles/texts.dart';
-
 @immutable
 class DashboardTile extends StatelessWidget {
   final Color backgroundColor;
@@ -23,7 +21,10 @@ class DashboardTile extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Text(title, style: textStyles['tile_title']),
+                Text(
+                  title,
+                  style: Theme.of(context).textTheme.title.copyWith(color: Colors.white),
+                ),
                 Icon(
                   iconData,
                   color: Colors.white,

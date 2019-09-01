@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:loading_overlay/loading_overlay.dart';
 import 'package:meta/meta.dart';
-import 'package:modal_progress_hud/modal_progress_hud.dart';
 
 import 'package:redux_thunk_boilerplate/src/constants/keys.dart' as keys;
 
@@ -13,7 +13,11 @@ class AppContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         key: keys.appScaffold,
-        body: ModalProgressHUD(child: vm.child, inAsyncCall: vm.loading > 0),
+        body: LoadingOverlay(
+          child: vm.child,
+          isLoading: vm.loading > 0,
+          color: Theme.of(context).colorScheme.background,
+        ),
       );
 }
 

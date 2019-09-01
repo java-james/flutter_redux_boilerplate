@@ -9,15 +9,11 @@ part 'auth.g.dart';
 @immutable
 @JsonSerializable()
 class AuthState {
-  static const String STATE_KEY = 'auth';
 
-  @JsonKey(name: 'token')
   final String token;
 
-  @JsonKey(name: 'user')
   final User user;
 
-  @JsonKey(name: 'error')
   final String error;
 
   AuthState({

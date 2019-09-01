@@ -1,17 +1,24 @@
+import 'package:redux/redux.dart';
 import 'package:redux_thunk_boilerplate/src/models/state/app.dart';
 import 'package:redux_thunk_boilerplate/src/reducers/app.dart';
 import 'package:redux_thunk_boilerplate/src/store/middleware.dart';
-import 'package:redux/redux.dart';
 
-Store<AppState> store = _createStore();
-
-Store<AppState> _createStore() {
+Future<Store<AppState>> createStore() async {
+  final _initialState = await _loadState();
   Store<AppState> store = Store(
     appReducer,
-    initialState: AppState(),
+    initialState: _initialState,
     middleware: createMiddleware(),
   );
-
-  persistor.load(store);
   return store;
+}
+
+Future<AppState> _loadState() async {
+  try {
+    final initialState = await persistor.load();
+    return initialState;
+  } on Exception {
+    // Re-hydration error
+    return AppState();
+  }
 }

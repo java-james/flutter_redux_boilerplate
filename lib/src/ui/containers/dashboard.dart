@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:redux_thunk_boilerplate/src/models/user.dart';
-import 'package:redux_thunk_boilerplate/src/styles/texts.dart';
 import 'package:redux_thunk_boilerplate/src/ui/components/dashboard_list.dart';
 
 @immutable
@@ -13,7 +12,10 @@ class DashboardContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Redux Thunk', style: textStyles['nav_title'])),
+      appBar: AppBar(
+          title: Text(
+        'Redux Thunk',
+      )),
       floatingActionButton: FloatingActionButton(
           onPressed: () => vm.dispatchOnViewAbout(context),
           child: Icon(
@@ -23,6 +25,7 @@ class DashboardContainer extends StatelessWidget {
           padding: const EdgeInsets.only(top: 12.0),
           child: DashboardList(
             onClickAbout: vm.dispatchOnViewAbout,
+            onClickLogout: vm.dispatchOnLogout,
           )),
     );
   }
@@ -32,6 +35,11 @@ class DashboardContainer extends StatelessWidget {
 class DashboardVM {
   final User user;
   final Function(BuildContext) dispatchOnViewAbout;
+  final Function(BuildContext) dispatchOnLogout;
 
-  DashboardVM({@required this.user, @required this.dispatchOnViewAbout});
+  DashboardVM({
+    @required this.user,
+    @required this.dispatchOnViewAbout,
+    @required this.dispatchOnLogout,
+  });
 }
