@@ -4,7 +4,7 @@ The project can be launched from the IDE or via command line. You will need the 
 
 ## Get the SDK
 - Download the latest flutter SDK and add flutter to your path using `export PATH={flutter SDK path}/bin:$PATH` 
-- Switch to the Beta channel by running `flutter channel beta` and selecting the beta option
+- Switch to the stable channel if you are not using it already by running `flutter channel stable`
 
 ## Get pub packages
 To fetch the latest dependencies run `flutter packages get` in the project directory.
