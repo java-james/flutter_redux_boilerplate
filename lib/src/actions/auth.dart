@@ -16,7 +16,7 @@ class LoginSuccess {
 
 class LogoutSuccess {}
 
-final Function onLogin = (BuildContext context) {
+final Function onLogin = (BuildContext context) async {
   return (Store<AppState> store) {
     store.dispatch(global_actions.IncrementLoadingRequest());
     // TODO: login request
@@ -26,7 +26,7 @@ final Function onLogin = (BuildContext context) {
   };
 };
 
-final Function onLogout = (BuildContext context) {
+final Function onLogout = (BuildContext context) async  {
   return (Store<AppState> store) {
     store.dispatch(global_actions.IncrementLoadingRequest());
     // TODO: logout request
