@@ -3,7 +3,7 @@ description: Flutter redux thunk boilerplate
 version: 0.1.0
 
 environment:
-  flutter: 1.7.8+hotfix.4
+  flutter: 1.9.1+hotfix.2
 
 dependencies:
   flutter:
