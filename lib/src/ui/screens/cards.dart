@@ -18,9 +18,7 @@ class CardsScreen extends StatelessWidget {
 
   CardsVM _buildVM(Store<AppState> store, context) {
     _viewCard(context, cardId) {
-      // store.dispatch(card_actions.SetCardDetail(cardId: cardId));
-      // Navigator.of(context).pushNamed(CardScreen.route);
-      // store.dispatch(navigation_actions.doPush(ConnectionScreen.route, navKey: keys.authenticatedNavigator));
+      // TODO SetCardDetail then navigate to card screen
     }
 
     final allCardIIds = store.state.entities.cards.allIds;

@@ -35,11 +35,13 @@ class DashboardContainer extends StatelessWidget {
 class DashboardVM {
   final User user;
   final Function(BuildContext) dispatchOnViewAbout;
+  final Function(BuildContext) dispatchOnViewCards;
   final Function(BuildContext) dispatchOnLogout;
 
   DashboardVM({
     @required this.user,
     @required this.dispatchOnViewAbout,
+    @required this.dispatchOnViewCards,
     @required this.dispatchOnLogout,
   });
 }

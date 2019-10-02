@@ -12,7 +12,7 @@ class CardsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) => cards.isNotEmpty ? _renderList() : _renderEmpty();
 
-  Widget _renderList() => Text('Your cards will be shown here');
+  Widget _renderList() => Text('TODO: Your cards list will be shown here :)');
 
   Widget _renderEmpty() => Row(
         mainAxisAlignment: MainAxisAlignment.center,

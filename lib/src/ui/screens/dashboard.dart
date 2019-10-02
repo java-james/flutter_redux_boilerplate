@@ -6,6 +6,7 @@ import 'package:redux_thunk_boilerplate/src/actions/navigation.dart' as navigati
 import 'package:redux_thunk_boilerplate/src/models/state/app.dart';
 import 'package:redux_thunk_boilerplate/src/ui/containers/dashboard.dart';
 import 'package:redux_thunk_boilerplate/src/ui/screens/about.dart';
+import 'package:redux_thunk_boilerplate/src/ui/screens/cards.dart';
 
 @immutable
 class DashboardScreen extends StatelessWidget {
@@ -26,6 +27,9 @@ class DashboardScreen extends StatelessWidget {
         user: store.state.auth.user,
         dispatchOnViewAbout: (BuildContext context) {
           store.dispatch(navigation_actions.doNavigatePush(AboutScreen.route));
+        },
+        dispatchOnViewCards: (BuildContext context) {
+          store.dispatch(navigation_actions.doNavigatePush(CardsScreen.route));
         },
         dispatchOnLogout: (BuildContext context) {
           store.dispatch(auth_actions.doLogout(context));

@@ -7,8 +7,13 @@ import 'package:redux_thunk_boilerplate/src/ui/components/dashboard_tile.dart';
 class DashboardList extends StatelessWidget {
   final Function(BuildContext) onClickAbout;
   final Function(BuildContext) onClickLogout;
+  final Function(BuildContext) onClickCards;
 
-  DashboardList({@required this.onClickAbout, @required this.onClickLogout});
+  DashboardList({
+    @required this.onClickAbout,
+    @required this.onClickLogout,
+    @required this.onClickCards,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +42,12 @@ class DashboardList extends StatelessWidget {
           backgroundColor: Colors.green,
           iconData: Icons.info_outline,
         ),
-        DashboardTile(title: 'No Action 1', backgroundColor: Colors.lightBlue, iconData: Icons.people),
+        DashboardTile(
+          title: 'View Cards',
+          action: onClickCards,
+          backgroundColor: Colors.lightBlue,
+          iconData: Icons.crop_landscape,
+        ),
         DashboardTile(
           title: 'Log Out',
           backgroundColor: Colors.amber,
