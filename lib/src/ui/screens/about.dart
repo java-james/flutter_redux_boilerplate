@@ -7,7 +7,7 @@ import 'package:redux_thunk_boilerplate/src/models/state/app.dart';
 
 @immutable
 class AboutScreen extends StatelessWidget {
-  static final String route = 'about';
+  static const String route = 'about';
 
   @override
   Widget build(BuildContext context) {

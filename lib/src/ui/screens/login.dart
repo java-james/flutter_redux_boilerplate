@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:redux/redux.dart';
-
+import 'package:redux_thunk_boilerplate/src/actions/auth.dart' as auth_actions;
 import 'package:redux_thunk_boilerplate/src/models/state/app.dart';
 import 'package:redux_thunk_boilerplate/src/ui/containers/login.dart';
-import 'package:redux_thunk_boilerplate/src/actions/auth.dart' as auth_actions;
 
 @immutable
 class LoginScreen extends StatelessWidget {
-  static final String route = 'login';
+  static const String route = 'login';
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +23,7 @@ class LoginScreen extends StatelessWidget {
     return LoginVM(
         authState: store.state.auth,
         dispatchOnLogin: (BuildContext context) {
-          store.dispatch(auth_actions.onLogin(context));
+          store.dispatch(auth_actions.doLogin(context));
         });
   }
 }

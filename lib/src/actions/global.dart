@@ -1,13 +1,13 @@
-class IncrementLoadingRequest {
+class IncrementLoadingAction {
   final int amount = 1;
 
-  IncrementLoadingRequest();
+  IncrementLoadingAction();
 }
 
-class DecrementLoadingRequest {
+class DecrementLoadingAction {
   final int amount = 1;
 
-  DecrementLoadingRequest();
+  DecrementLoadingAction();
 }
 
-class Reset {}
+class ResetAction {}
