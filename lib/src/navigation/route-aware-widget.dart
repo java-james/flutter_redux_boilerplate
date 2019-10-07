@@ -10,6 +10,7 @@ class RouteAwareWidget extends StatefulWidget {
 
   RouteAwareWidget({this.child});
 
+  @override
   State<RouteAwareWidget> createState() => RouteAwareWidgetState(child: child);
 }
 

@@ -9,23 +9,28 @@ class CardsContainer extends StatelessWidget {
   CardsContainer({@required this.vm});
 
   @override
-  Widget build(BuildContext context) => Container(
-        color: Theme.of(context).colorScheme.background,
-        child: SafeArea(
-          child: Column(
-            children: <Widget>[
-              Divider(height: 0, color: Colors.black12),
-              Expanded(
-                child: CardsList(
-                  onViewCard: vm.onViewCard,
-                  cards: vm.cards,
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+            title: Text(
+          'Cards',
+        )),
+        body: Container(
+          color: Theme.of(context).colorScheme.background,
+          child: SafeArea(
+            child: Column(
+              children: <Widget>[
+                Divider(height: 0, color: Colors.black12),
+                Expanded(
+                  child: CardsList(
+                    onViewCard: vm.onViewCard,
+                    cards: vm.cards,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       );
-
 }
 
 @immutable

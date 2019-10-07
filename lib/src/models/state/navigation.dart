@@ -10,7 +10,7 @@ class NavigationState {
   @JsonKey(ignore: true)
   final List<String> routes;
 
-  NavigationState({List<String> routes}) : routes = routes ?? List<String>();
+  NavigationState({List<String> routes}) : routes = routes ?? <String>[];
 
   // allows us to modify NavigationState parameters while cloning previous ones
   NavigationState copyWith({List<String> routes}) => NavigationState(

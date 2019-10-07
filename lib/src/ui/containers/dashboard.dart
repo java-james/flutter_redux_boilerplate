@@ -26,6 +26,7 @@ class DashboardContainer extends StatelessWidget {
           child: DashboardList(
             onClickAbout: vm.dispatchOnViewAbout,
             onClickLogout: vm.dispatchOnLogout,
+            onClickCards: vm.dispatchOnViewCards,
           )),
     );
   }
