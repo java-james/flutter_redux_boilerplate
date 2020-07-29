@@ -10,11 +10,11 @@ The project can be launched from the IDE or via command line. You will need the 
 To fetch the latest dependencies run `flutter packages get` in the project directory.
 
 ## Build runner
-We depend on [build runner](https://pub.dartlang.org/packages/build_runner) to generate our json serialization methods. This will need to run this when we first checkout the porject or after changing a model.
+We depend on [build runner](https://pub.dartlang.org/packages/build_runner) to generate our json serialization methods. This will need to run this when we first checkout the project or after changing a model.
 
-After getting packages run `flutter packages pub run build_runner build` in the project directory. you should see `*.g.dart` files generated as a result.
+After getting packages run `flutter pub run build_runner build` in the project directory. you should see `*.g.dart` files generated as a result.
 
-You can use `flutter packages pub run build_runner watch` during development.
+You can use `flutter pub run build_runner watch` during development.
 
 ## Running via command line
 - Check connected devices with command  `flutter devices`
